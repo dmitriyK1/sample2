@@ -1,0 +1,1 @@
+export { FavoriteQuestionsTab } from './FavoriteQuestionsTab';

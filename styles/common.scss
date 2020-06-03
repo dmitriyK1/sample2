@@ -1,0 +1,124 @@
+@import '../../../styles/variables';
+
+$tiles-list-padding: 2px;
+
+.modalContent {
+  background-color: $PRIMARY_WHITE;
+  padding: 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.modalHeader {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.description {
+  padding-top: 8px;
+  font-size: 16px;
+  color: #999;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: npx(3) npx(4);
+}
+
+.tabPanel.up {
+  &:global(.react-tabs__tab-panel--selected) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+
+.tagsList {
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #f2f2f2;
+  display: inline-block;
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  color: #000;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.tagSelected {
+  background-color: #e5e5e5;
+}
+
+.tagCloseButton {
+  padding-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.primaryTagsList {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.infiniteScrollContainer {
+  flex-grow: 1;
+  overflow: hidden;
+  margin: 0 14px 0px 30px;
+}
+
+.infiniteScroll {
+  height: 100%;
+  padding: 2px;
+}
+
+.spinner {
+  margin: 0 auto;
+}
+
+.tilesListHeader {
+  align-items: flex-start;
+  display: flex;
+  margin: 0 npx(4) 22px npx(4);
+}
+
+.addButton.up {
+  position: relative;
+  overflow: visible;
+}
+
+.badge {
+  background-color: #ebb343;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.searchInput.up {
+  min-width: 300px;
+  width: auto;
+}
+
+.listTabs.up {
+  border-bottom-width: 1px;
+  margin: 0 npx(4) npx(3) npx(4);
+}
+
+.categoriesSelect {
+  :global .Select-control {
+    width: 155px;
+  }
+}

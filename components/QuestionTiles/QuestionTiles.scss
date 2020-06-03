@@ -1,0 +1,127 @@
+@import '../../../../styles/variables';
+
+$tiles-list-padding: 2px;
+$tile-favorite-icon-color: #f5b11a;
+
+.highlight {
+  background-color: #ecb243;
+}
+
+.tileHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: npx(1.5);
+  padding-bottom: npx(1.5);
+  z-index: z($tile-order, header);
+  background-color: #F8F8F8;
+}
+
+.favoriteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $tile-favorite-icon-color;
+  font-size: npx(2);
+  outline: none;
+}
+
+.questionItem {
+  $margin: 10px;
+
+  position: relative;
+  border: 1px solid #DCDCDC;
+  width: calc(100% - #{$tiles-list-padding});
+  margin-right: $margin;
+  margin-bottom: $margin;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media only screen and (min-width: 800px) {
+    $tiles-per-row: 2;
+
+    width: calc(100% / #{$tiles-per-row} - #{$margin} - #{$tiles-list-padding});
+  }
+
+  @media only screen and (min-width: 1024px) {
+    $tiles-per-row: 3;
+
+    width: calc(100% / #{$tiles-per-row} - #{$margin} - #{$tiles-list-padding});
+  }
+
+  @media only screen and (min-width: 1280px) {
+    $tiles-per-row: 4;
+
+    width: calc(100% / #{$tiles-per-row} - #{$margin} - #{$tiles-list-padding});
+  }
+}
+
+.questionItemSelected {
+  box-shadow: 0 0 0 $tiles-list-padding #6296D7;
+  border: 1px solid transparent;
+}
+
+.addSingleQuestionBtn.up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+
+  &.addSingleQuestionBtnVisible {
+    display: block;
+  }
+}
+
+.questionText {
+  position: relative;
+  z-index: 0;
+  width: 90%;
+  padding-left: 12px;
+  font-weight: bold;
+}
+
+.questionBody {
+  font-size: 13px;
+  padding: 16px;
+  color: #999;
+}
+
+.questionHeading {
+  color: #999;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-bottom: 8px;
+}
+
+.scaleValue {
+  margin-bottom: 12px;
+}
+
+.answerOption,
+.scaleLabel {
+  &:before {
+    content: '- ';
+  }
+}
+
+.tagsList {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background-color: #F2F2F2;
+  color: #000;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.tagSelected {
+  background-color: #E5E5E5;
+}
